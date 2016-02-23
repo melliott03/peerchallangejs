@@ -48,18 +48,49 @@ x = parseInt(x);
 
 //******* SWITCH PROGRAMMERS *******
 
+
+
 //8. Add 'value' and the new variable created in Step 6 together and store them in 'value'
+
+value = value + x ;
 
 //9. If the new value of 'value' is greater than 1326, set 'value' equal to 2. If not, check to see if it is equal to 4040, if it is, set 'value' equal to 13. 
 //If neither of these are true, set the value to 9.
 
-//10. Create a while loop that counts down from 9 and increments 'value' by 1.
+if(value > 1326){
+	value = 2;
+} else if (value == 4040) {
+	value = 13;
+} else {
+	value = 9 ;
+};
 
+//10. Create a while loop that counts down from 9 and increments 'value' by 1.
+var i = 9;
+while (i > 0){
+	value ++;
+	i--;
+};
+console.log("before function",value);
 //11. Create a function that accepts an argument 'val'. The function should convert 'val' to a String, then drop the first character off the String, but only if there 
 //is more than 1 character in the String. Return 'val' and set the 'value' to the returned value.
 
+function cool(val){
+	val = val.toString();
+	console.log("before if",val);
+	if(val.length > 1 ){
+		val = val.slice(1);
+		console.log('in function',val);
+		return value = val;
+	}
+
+}
+
+
 //12. Call the function.
 
-//13. Console log value. Create an index.html file, link the this Javascript file. Load in the browser, check the value.
+cool(value);
 
+//13. Console log value. Create an index.html file, link the this Javascript file. Load in the browser, check the value.
+console.log("end value", value);
 //14. Your answer should be a String value that equals 8. Is that what you got?
